@@ -1,0 +1,149 @@
+/*
+CONTENT PLACING
+ */
+.shroud {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0.90;
+  background: #fff;
+  z-index: 20;
+}
+.shroud--hidden {display: none;}
+.side-menu {
+  position: absolute;
+  left: -320px;
+  opacity: 1;
+  background: #fff;
+  z-index: 21;
+}
+.modal-callback {
+  display: none;
+  position: absolute;
+  right: -320px;
+  opacity: 1;
+  background: #fff;
+  z-index: 21;
+}
+.modal-feedback {
+  display: none;
+  position: absolute;
+  right: -320px;
+  opacity: 1;
+  background: #fff;
+  z-index: 21;
+}
+/*
+COMMON ELEMENTS AND DEFAULTS SETTINGS
+ */
+body {
+  font-family: 'TT Lakes';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #1B1C21;
+  background: #F8F8F8;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+h1, p {margin: 0;}
+a {text-decoration: none; color: inherit;}
+input {
+  font-family: 'TT Lakes';
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #1B1C21;
+}
+.button {
+ font-family: 'TT Lakes';
+ font-size: 16px;
+ line-height: 24px;
+ letter-spacing: -0.2px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: inherit;
+ padding: 0;
+ border: 0;
+ outline: none;
+ cursor: pointer;
+}
+.flex-block {
+  display: flex;
+}
+.buttons-container {
+  display: flex;
+}
+
+/*
+BUTTONS STYLES
+ */
+
+.header .button,
+.main__head .button:last-child,
+.side-menu__head .button,
+.side-menu__contacts .button,
+.modal-callback .back,
+.modal-feedback .back {
+  background-color: #FF3E79;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.more__button-icon {
+  box-sizing: border-box;
+  height: 24px;
+  width: 24px;
+  border: 1px solid #F8F8F8;
+  transition: transform 0.8s ease;
+}
+.more__button-text {
+  margin-left: 8px;
+}
+.buttons-container .button:first-child {
+  margin-left: 0;
+}
+.buttons-container .button:last-child {
+  margin-right: 0;
+}
+
+/*
+HOVER BUTTONS STYLES
+ */
+
+.header .button:hover,
+.main__head .button:last-child:hover,
+.side-menu__head .button:hover,
+.side-menu__contacts .button:hover,
+.modal-callback .back:hover,
+.modal-feedback .back:hover {
+  background-color: #41F6;
+  transform: scale(1.1);
+  box-shadow:
+    2px 0 2px 0 blue,
+    0 2px 2px 0 green,
+    -2px 0 2px 0 yellow,
+    0 -2px 2px 0  red;
+}
+.more__button-icon:hover {
+  border: 1px solid #41F6D7;
+  border-radius: 12px;
+}
+
+/*
+MEDIA 1440px
+ */
+
+@media (min-width: 1440px) {
+  .side-menu {
+    position: fixed;
+    transform: translateX(320px);
+    z-index: 19;
+  }
+  header {margin-left: 320px;}
+  main {margin-left: 320px;}
+  footer {margin-left: 320px;}
+}
